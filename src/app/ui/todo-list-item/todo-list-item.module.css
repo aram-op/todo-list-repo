@@ -1,0 +1,22 @@
+.item {
+    list-style-type: none;
+    display: flex;
+    height: fit-content;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.complete {
+    height: 20px;
+}
+
+.delete {
+    height: 20px;
+}

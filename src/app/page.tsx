@@ -1,3 +1,5 @@
+import Todos from '@/app/todos/page';
+
 export default function Home() {
-    return (<></>);
+    return (<Todos/>);
 }
