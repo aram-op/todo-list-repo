@@ -1,0 +1,41 @@
+.container {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container button {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.06);
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background: rgba(255, 255, 255, 0.11);
+}
+
+.container input {
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.06);
+    caret-color: var(--main-font-color);
+    color: var(--main-font-color);
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    width: calc(100% - 55px);
+}
+
+.container input:hover, .container input:focus {
+    background: rgba(255, 255, 255, 0.11);
+}
+
+.container input::placeholder {
+    color: rgba(187, 193, 208, 0.38);
+}

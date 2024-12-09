@@ -1,5 +1,5 @@
-import Todos from '@/app/todos/page';
+import {redirect} from 'next/navigation';
 
 export default function Home() {
-    return (<Todos/>);
+    redirect('/todos');
 }

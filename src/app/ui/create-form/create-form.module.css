@@ -1,0 +1,46 @@
+.form {
+    width: 80%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.06);
+    caret-color: var(--main-font-color);
+    color: var(--main-font-color);
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+}
+
+.title:hover, .title:focus {
+    background: rgba(255, 255, 255, 0.11);
+}
+
+.title::placeholder {
+    color: rgba(187, 193, 208, 0.38);
+}
+
+.create {
+    width: 100px;
+    height: 40px;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 8px;
+    color: var(--main-font-color);
+    cursor: pointer;
+}
+
+.create:hover {
+    opacity: 0.9;
+}
+
+.create:active {
+    opacity: 0.7;
+}

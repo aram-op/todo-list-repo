@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.container h1 {
+    align-items: center;
+    font-size: max(3vw, 40px);
+    margin-bottom: 30px;
+}
+
+.container h1 img {
+    width: max(2vw, 30px);
+    height: max(2vw, 30px);
+}

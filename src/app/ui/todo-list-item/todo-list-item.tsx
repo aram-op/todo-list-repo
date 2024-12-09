@@ -2,19 +2,37 @@
 
 import {useState} from 'react';
 import styles from './todo-list-item.module.css';
+import {Todo} from '@/app/lib/definitions';
+import {deleteTodoById, updateTodo} from '@/app/lib/data';
+import {useRouter} from 'next/navigation';
 
-function TodoListItem({title} : {title: string}) {
-    const [isDone, setIsDone] = useState(false);
+function TodoListItem({todo, onItemRemoved} : {todo: Todo, onItemRemoved: (id: string) => void}) {
+    const [isDone, setIsDone] = useState(todo.is_completed);
+    const router = useRouter();
 
     function handleMarkDone() {
         setIsDone(!isDone);
+        updateTodo({...todo, is_completed: isDone});
+    }
+
+    function handleRemove() {
+        deleteTodoById(todo.id);
+        onItemRemoved(todo.id);
+    }
+
+    function handleSelectItem() {
+        router.push(`todos/${todo.id}/edit`);
     }
 
     return(
         <li className={styles.item}>
-            <p className={`${styles.text} ${isDone ? styles.completed : ''}`}>{title}</p>
-            <button onClick={() => handleMarkDone()} className={styles.complete}>checkmark</button>
-            <button className={styles.delete}>X</button>
+            <p onClick={handleSelectItem} className={`${styles.text} ${isDone ? styles.completed : ''}`}>{todo.title}</p>
+            <button onClick={() => handleMarkDone()} className={styles.complete}>
+                <img src='check-mark.svg' width="20" height="20"/>
+            </button>
+            <button onClick={() => handleRemove()} className={styles.delete}>
+                <img src="remove.svg" width="25" height="25"/>
+            </button>
         </li>
     );
 }
