@@ -1,6 +1,53 @@
 :root {
-    --main-font-color: #FFFFFF;
-    --main-background-color: #253041;
+    --bg: white;
+    --textColor: black;
+    --hover: rgba(0, 0, 0, 0.06);
+    --active: rgba(0, 0, 0, 0.11);
+    --buttonColor: cornflowerblue;
+    --placeholderColor: rgba(0, 0, 0, 0.38);
+    --borderColor: rgba(0, 0, 0, 0.11);
+    --fieldColor: white;
+    --invertion: 0.6;
+}
+
+.light {
+    --bg: white;
+    --textColor: black;
+    --hover: rgba(0, 0, 0, 0.06);
+    --active: rgba(0, 0, 0, 0.11);
+    --buttonColor: cornflowerblue;
+    --placeholderColor: rgba(39, 40, 44, 0.38);
+    --borderColor: rgba(187, 193, 208, 0.38);
+    --fieldColor: white;
+    --invertion: 0.6;
+    width: 100%;
+    height: 100%;
+    padding: 5vh 5vw;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg);
+    color: var(--textColor);
+    transition: 0.3s;
+}
+
+.dark {
+    --bg: #253041;
+    --textColor: white;
+    --hover: rgba(255, 255, 255, 0.06);
+    --active: rgba(255, 255, 255, 0.11);
+    --buttonColor: cornflowerblue;
+    --placeholderColor: rgba(187, 193, 208, 0.38);
+    --borderColor: #253041;
+    --fieldColor: rgba(255, 255, 255, 0.06);
+    --invertion: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5vh 5vw;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg);
+    color: var(--textColor);
+    transition: 0.3s;
 }
 
 * {
@@ -11,12 +58,6 @@
 
 html, body {
     height: 100%;
-    background-color: #253041;
-    color: var(--main-font-color);
-}
-
-body {
-    padding: 5vh 5vw;
-    display: flex;
-    justify-content: center;
+    background-color: var(--bg);
+    color: var(--textColor);
 }

@@ -1,13 +1,13 @@
 import CreateForm from '@/app/ui/create-form/create-form';
 import styles from '../../page.module.css';
 
-function CreateTodo() {
+function Page() {
     return (
         <div className={styles.container}>
-            <h1>Create your todo</h1>
+            <h1>Create todo</h1>
             <CreateForm/>
         </div>
     );
 }
 
-export default CreateTodo;
+export default Page;

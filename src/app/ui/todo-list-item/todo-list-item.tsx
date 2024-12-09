@@ -10,13 +10,13 @@ function TodoListItem({todo, onItemRemoved} : {todo: Todo, onItemRemoved: (id: s
     const [isDone, setIsDone] = useState(todo.is_completed);
     const router = useRouter();
 
-    function handleMarkDone() {
+    async function handleMarkDone() {
         setIsDone(!isDone);
-        updateTodo({...todo, is_completed: isDone});
+        await updateTodo({...todo, is_completed: !isDone});
     }
 
-    function handleRemove() {
-        deleteTodoById(todo.id);
+    async function handleRemove() {
+        await deleteTodoById(todo.id);
         onItemRemoved(todo.id);
     }
 

@@ -33,6 +33,7 @@ export async function fetchTodoById(id: string) {
 }
 
 export async function updateTodo(todo: Todo) {
+    console.log(todo);
     try {
         const result = await pool.sql`
             UPDATE todos

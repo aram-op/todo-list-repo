@@ -8,7 +8,7 @@ export default async function Page({params}: { params: Promise<{ id: string }> }
 
     return (
         <div className={styles.container}>
-            <h1>Edit your todo</h1>
+            <h1>Edit todo</h1>
             <EditForm todo={todo}/>
         </div>
     );

@@ -9,23 +9,27 @@
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    border: none;
-    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--borderColor);
+    background: var(--fieldColor);
     margin-left: 15px;
     cursor: pointer;
 }
 
+.container button img {
+    filter: invert(var(--invertion));
+}
+
 .container button:hover {
-    background: rgba(255, 255, 255, 0.11);
+    background: var(--hover);
 }
 
 .container input {
     height: 40px;
     border-radius: 8px;
-    border: none;
+    border: 1px solid var(--borderColor);
     background-color: rgba(255, 255, 255, 0.06);
-    caret-color: var(--main-font-color);
-    color: var(--main-font-color);
+    caret-color: var(--textColor);
+    color: var(--textColor);
     font-size: 16px;
     padding: 10px;
     outline: none;
@@ -33,9 +37,9 @@
 }
 
 .container input:hover, .container input:focus {
-    background: rgba(255, 255, 255, 0.11);
+    background: var(--hover);
 }
 
 .container input::placeholder {
-    color: rgba(187, 193, 208, 0.38);
+    color: var(--placeholderColor);
 }

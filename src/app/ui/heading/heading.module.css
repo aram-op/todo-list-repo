@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+}
+
+.toggle {
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--buttonColor);
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+}
+
+.toggle img {
+    margin: 0 15px;
+}
+
+.toggle:hover {
+    filter: brightness(110%);
+}

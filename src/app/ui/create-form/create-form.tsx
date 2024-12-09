@@ -12,7 +12,7 @@ function CreateForm() {
         };
 
         if (rawFormData.title) {
-            addTodo(rawFormData.title.toString());
+            await addTodo(rawFormData.title.toString());
             redirect('/');
         }
     }

@@ -10,21 +10,21 @@
     width: 100%;
     height: 40px;
     border-radius: 8px;
-    border: none;
+    border: 1px solid var(--borderColor);
     background-color: rgba(255, 255, 255, 0.06);
-    caret-color: var(--main-font-color);
-    color: var(--main-font-color);
+    caret-color: var(--textColor);
+    color: var(--textColor);
     font-size: 16px;
     padding: 10px;
     outline: none;
 }
 
 .title:hover, .title:focus {
-    background: rgba(255, 255, 255, 0.11);
+    background: var(--hover);
 }
 
 .title::placeholder {
-    color: rgba(187, 193, 208, 0.38);
+    color: var(--placeholderColor);
 }
 
 .create {
@@ -33,7 +33,7 @@
     background-color: cornflowerblue;
     border: none;
     border-radius: 8px;
-    color: var(--main-font-color);
+    color: white;
     cursor: pointer;
 }
 
