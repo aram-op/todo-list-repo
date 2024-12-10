@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Searchbar component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <input
+      class="mock-poppins-font"
+      placeholder="What's up ? ..."
+      value="existing"
+    />
+    <a
+      href="/todos/create"
+    >
+      <button>
+        <img
+          height="30"
+          src="plus.svg"
+          width="30"
+        />
+      </button>
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Searchbar component should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <input
+      class="mock-poppins-font"
+      placeholder="What's up ? ..."
+      value="existing"
+    />
+    <a
+      href="/todos/create"
+    >
+      <button>
+        <img
+          height="30"
+          src="plus.svg"
+          width="30"
+        />
+      </button>
+    </a>
+  </div>
+</DocumentFragment>
+`;

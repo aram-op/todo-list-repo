@@ -32,10 +32,10 @@ function TodoListItem({todo, onItemRemoved}: {
             <p onClick={handleSelectItem}
                className={`${styles.text} ${isDone ? styles.completed : ''}`}>{todo.title}</p>
             <button onClick={() => handleMarkDone()} className={styles.complete}>
-                <img src="check-mark.svg" width="20" height="20"/>
+                <img src="check-mark.svg" width="20" height="20" alt="complete"/>
             </button>
             <button onClick={() => handleRemove()} className={styles.delete}>
-                <img src="remove.svg" width="25" height="25"/>
+                <img src="remove.svg" width="25" height="25" alt="remove"/>
             </button>
         </li>
     );

@@ -19,7 +19,7 @@ function Searchbar() {
         } else {
             params.delete('query');
         }
-        replace(`${pathname}?${params.toString()}`);
+        replace(params.toString() ? `${pathname}?${params.toString()}` : pathname);
     }, 300);
 
     return (

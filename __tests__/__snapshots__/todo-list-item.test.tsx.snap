@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoListItem Component matches snapshot 1`] = `
+<DocumentFragment>
+  <li
+    class="item"
+  >
+    <p
+      class="text "
+    >
+      Sample Todo
+    </p>
+    <button
+      class="complete"
+    >
+      <img
+        alt="complete"
+        height="20"
+        src="check-mark.svg"
+        width="20"
+      />
+    </button>
+    <button
+      class="delete"
+    >
+      <img
+        alt="remove"
+        height="25"
+        src="remove.svg"
+        width="25"
+      />
+    </button>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`TodoListItem component should match snapshot 1`] = `
+<DocumentFragment>
+  <li
+    class="item"
+  >
+    <p
+      class="text "
+    >
+      Go for a walk
+    </p>
+    <button
+      class="complete"
+    >
+      <img
+        alt="complete"
+        height="20"
+        src="check-mark.svg"
+        width="20"
+      />
+    </button>
+    <button
+      class="delete"
+    >
+      <img
+        alt="remove"
+        height="25"
+        src="remove.svg"
+        width="25"
+      />
+    </button>
+  </li>
+</DocumentFragment>
+`;

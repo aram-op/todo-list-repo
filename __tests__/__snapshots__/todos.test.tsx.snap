@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todos component should match snapshot 1`] = `
+<DocumentFragment>
+  <ul
+    class="list"
+  >
+    <li
+      data-testid="todo-item"
+    >
+      <p>
+        Buy milk
+      </p>
+      <button>
+        Remove
+      </button>
+    </li>
+    <li
+      data-testid="todo-item"
+    >
+      <p>
+        Go for a walk
+      </p>
+      <button>
+        Remove
+      </button>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
