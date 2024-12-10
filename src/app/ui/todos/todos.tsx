@@ -8,6 +8,7 @@ import styles from './todos.module.css';
 
 function Todos({query}: { query: string }) {
     const [todos, setTodos] = useState<Todo[]>([]);
+    const [error, setError] = useState<Error | null>(null);
 
     async function getTodos() {
         const result = await fetchFilteredTodos(query);
@@ -20,8 +21,12 @@ function Todos({query}: { query: string }) {
     }
 
     useEffect(() => {
-        getTodos();
+        getTodos().catch((err) => {
+            setError(() => err);
+        });
     }, [query]);
+
+    if(error) throw new Error('Failed to fetch todos :(');
 
     const list = todos.map((todo) => {
             return (
