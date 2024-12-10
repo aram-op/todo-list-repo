@@ -1,24 +1,24 @@
 .container {
-    display: flex;
     align-items: center;
+    display: flex;
     height: 50px;
-    width: 100%;
     justify-content: center;
+    width: 100%;
 }
 
 .toggle {
-    height: 40px;
-    width: 100px;
-    border-radius: 8px;
-    border: none;
-    background-color: var(--buttonColor);
-    cursor: pointer;
-    color: white;
-    font-size: 20px;
     align-items: center;
+    background-color: var(--buttonColor);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
     display: flex;
+    font-size: 20px;
+    height: 40px;
     justify-content: space-between;
     margin-left: 50px;
+    width: 100px;
 }
 
 .toggle img {

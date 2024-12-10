@@ -1,16 +1,16 @@
 .item {
-    list-style-type: none;
-    display: grid;
-    height: fit-content;
-    grid-template-columns: calc(100% - 100px) 50px 50px;
     align-items: center;
+    display: grid;
+    grid-template-columns: calc(100% - 100px) 50px 50px;
+    height: fit-content;
+    list-style-type: none;
 }
 
 .item p {
-    padding: 15px;
-    height: 100%;
-    cursor: pointer;
     border-radius: 8px;
+    cursor: pointer;
+    height: 100%;
+    padding: 15px;
 }
 
 .item p:hover {
@@ -22,22 +22,22 @@
 }
 
 .text {
-    font-weight: 400;
     font-size: 20px;
+    font-weight: 400;
 }
 
 .completed {
-    text-decoration: line-through;
     opacity: 0.5;
+    text-decoration: line-through;
 }
 
 .complete {
-    height: 30px;
-    width: 30px;
     background: transparent;
     border: none;
     cursor: pointer;
+    height: 30px;
     justify-self: end;
+    width: 30px;
 }
 
 .complete img {
@@ -49,12 +49,12 @@
 }
 
 .delete {
-    height: 30px;
-    width: 30px;
     background: transparent;
     border: none;
     cursor: pointer;
+    height: 30px;
     justify-self: end;
+    width: 30px;
 }
 
 .delete img {

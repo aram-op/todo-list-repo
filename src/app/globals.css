@@ -1,72 +1,72 @@
 :root {
-    --bg: white;
-    --textColor: black;
-    --hover: rgba(0, 0, 0, 0.06);
     --active: rgba(0, 0, 0, 0.11);
-    --buttonColor: cornflowerblue;
-    --placeholderColor: rgba(0, 0, 0, 0.38);
+    --bg: white;
     --borderColor: rgba(0, 0, 0, 0.11);
+    --buttonColor: cornflowerblue;
     --fieldColor: white;
+    --hover: rgba(0, 0, 0, 0.06);
     --invertion: 0.6;
+    --placeholderColor: rgba(0, 0, 0, 0.38);
+    --textColor: black;
     --validationMessageColor: #c96a6a;
 }
 
 .light {
-    --bg: white;
-    --textColor: black;
-    --hover: rgba(0, 0, 0, 0.06);
     --active: rgba(0, 0, 0, 0.11);
-    --buttonColor: cornflowerblue;
-    --placeholderColor: rgba(39, 40, 44, 0.38);
+    --bg: white;
     --borderColor: rgba(187, 193, 208, 0.38);
+    --buttonColor: cornflowerblue;
     --fieldColor: white;
+    --hover: rgba(0, 0, 0, 0.06);
     --invertion: 0.6;
-    width: 100%;
-    height: 100%;
-    padding: 5vh 5vw;
-    display: flex;
-    justify-content: center;
+    --placeholderColor: rgba(39, 40, 44, 0.38);
+    --textColor: black;
     background-color: var(--bg);
     color: var(--textColor);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 5vh 5vw;
     transition: 0.3s;
+    width: 100%;
 }
 
 .dark {
-    --bg: #253041;
-    --textColor: white;
-    --hover: rgba(255, 255, 255, 0.06);
     --active: rgba(255, 255, 255, 0.11);
-    --buttonColor: cornflowerblue;
-    --placeholderColor: rgba(187, 193, 208, 0.38);
+    --bg: #253041;
     --borderColor: #253041;
+    --buttonColor: cornflowerblue;
     --fieldColor: rgba(255, 255, 255, 0.06);
+    --hover: rgba(255, 255, 255, 0.06);
     --invertion: 0;
-    width: 100%;
-    height: 100%;
-    padding: 5vh 5vw;
-    display: flex;
-    justify-content: center;
+    --placeholderColor: rgba(187, 193, 208, 0.38);
+    --textColor: white;
     background-color: var(--bg);
     color: var(--textColor);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 5vh 5vw;
     transition: 0.3s;
+    width: 100%;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
     background-color: var(--bg);
     color: var(--textColor);
+    height: 100%;
 }
 
 .errorContainer {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 140px;
     justify-content: space-between;
 }
@@ -77,13 +77,13 @@ html, body {
 }
 
 .errorContainer button {
-    width: 100px;
-    height: 40px;
-    color: white;
     background-color: var(--buttonColor);
     border: none;
     border-radius: 8px;
+    color: white;
     cursor: pointer;
+    height: 40px;
+    width: 100px;
 }
 
 .errorContainer button:hover {
