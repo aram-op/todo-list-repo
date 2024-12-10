@@ -8,6 +8,7 @@
     --borderColor: rgba(0, 0, 0, 0.11);
     --fieldColor: white;
     --invertion: 0.6;
+    --validationMessageColor: #c96a6a;
 }
 
 .light {
