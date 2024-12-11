@@ -38,12 +38,8 @@ function TodoListItem({todo, onItemRemoved}: {
 
     return (
         <li className={styles.item}>
-            <p
-                onClick={handleSelectItem}
-                className={`${styles.text} ${isDone ? styles.completed : ''}`}
-            >
-                {todo.title}
-            </p>
+            <p onClick={handleSelectItem}
+               className={`${styles.text} ${isDone ? styles.completed : ''}`}>{todo.title}</p>
             <button onClick={handleMarkDone} className={styles.complete}>
                 <img src="check-mark.svg" width="20" height="20" alt="complete"/>
             </button>
