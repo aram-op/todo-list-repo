@@ -4,40 +4,49 @@ import {addTodo} from '@/app/lib/data';
 import {redirect} from 'next/navigation';
 import styles from './create-form.module.css';
 import {poppins} from '@/app/ui/fonts';
-import {useState} from 'react';
+import {ChangeEvent, FormEvent, useState} from 'react';
 
 function CreateForm() {
-    const [error, setError] = useState<{message: string} | null>(null);
+    const [error, setError] = useState<{ message: string } | null>(null);
+    const [value, setValue] = useState('');
 
-    async function create(formData: FormData) {
-        const rawFormData = {
-            title: formData.get('title'),
-        };
+    function handleSubmit(e: FormEvent) {
+        e.preventDefault();
 
-        if (rawFormData.title) {
-            await addTodo(rawFormData.title.toString());
-            redirect('/');
-        }
-        setError({message: 'Title field cannot be empty!'});
+        if (error) return;
+
+        addTodo(value);
+        redirect('/');
     }
 
-    function handleInputChange(input: string) {
-        if(input.length > 0) {
+    function handleInputChange(e: ChangeEvent<HTMLInputElement>) {
+        const input = e.target.value;
+        setValue(() => input);
+
+        if (/^\s*$/.test(input)) {
+            setError({message: 'Title field cannot be empty!'});
+        } else {
             setError(null);
         }
     }
 
     return (
-        <form className={styles.form} action={create}>
+        <form className={styles.form} onSubmit={handleSubmit}>
             <p className={styles.errorMessage}>{error && error.message}</p>
             <input
                 className={`${styles.title} ${poppins.className}`}
                 name="title"
                 placeholder="... needs to be done"
-                onChange={(e) => handleInputChange(e.target.value)}
+                onChange={handleInputChange}
             />
 
-            <button className={`${styles.create} ${poppins.className}`} type={'submit'}>Create</button>
+            <button
+                className={`${styles.create} ${poppins.className}`}
+                type={'submit'}
+                disabled={/^\s*$/.test(value)}
+            >
+                Create
+            </button>
         </form>
     );
 }
