@@ -5,42 +5,49 @@ import {redirect} from 'next/navigation';
 import styles from './edit-form.module.css';
 import {poppins} from '@/app/ui/fonts';
 import {Todo} from '@/app/lib/definitions';
-import {useState} from 'react';
+import {ChangeEvent, FormEvent, useState} from 'react';
 
 function EditForm({todo}: { todo: Todo }) {
     const [error, setError] = useState<{message: string} | null>(null);
+    const [value, setValue] = useState(todo.title);
 
-    async function edit(formData: FormData) {
-        const rawFormData = {
-            title: formData.get('title'),
-        };
+    function handleSubmit(e: FormEvent) {
+        e.preventDefault();
 
-        if(rawFormData.title && rawFormData.title === todo.title) {
-            return;
-        } else if (rawFormData.title) {
-            await updateTodo({...todo, title: rawFormData.title.toString()});
-            redirect('/');
-        }
-        setError({message: 'Title field cannot be empty!'});
+        if(error || value === todo.title) return;
+
+        updateTodo({...todo, title: value});
+        redirect('/');
     }
 
-    function handleInputChange(input: string) {
-        if(input.length > 0) {
+    function handleInputChange(e: ChangeEvent<HTMLInputElement>) {
+        const input = e.target.value;
+        setValue(() => input);
+
+        if (/^\s*$/.test(input)) {
+            setError({message: 'Title field cannot be empty!'});
+        } else {
             setError(null);
         }
     }
 
     return (
-        <form className={styles.form} action={edit}>
+        <form className={styles.form} onSubmit={handleSubmit}>
             <p className={styles.errorMessage}>{error && error.message}</p>
             <input
                 className={`${styles.title} ${poppins.className}`}
                 name="title"
                 defaultValue={todo.title}
-                onChange={(e) => handleInputChange(e.target.value)}
+                onChange={handleInputChange}
             />
 
-            <button className={`${styles.edit} ${poppins.className}`} type={'submit'}>Save Changes</button>
+            <button
+                className={`${styles.edit} ${poppins.className}`}
+                type={'submit'}
+                disabled={/^\s*$/.test(value) || value === todo.title}
+            >
+                Save Changes
+            </button>
         </form>
     );
 }
